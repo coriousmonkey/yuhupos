@@ -66,30 +66,30 @@ and open the template in the editor.
                     window.localStorage.setItem('password', password);
 //                    hostname
 
-
-                    $.ajax({
-                        url: app_hostname + 'user/login',
-                        crossDomain: true,
-                        data: {
-                            username:username,
-                            password:password,
-                        },
-                        type: 'POST',
-                        success: function (data, textStatus, jqXHR) {
-                            console.log(data);
-                            if(data['succes']){
-                                window.location="dashboard.html";
-                            }else{
-                                M.toast({html: data['error'] })
-                            }
-                        },
-                        error: function (jqXHR, textStatus, errorThrown) {
-                            alert( JSON.stringify(jqXHR) );
-                            alert(JSON.stringify(textStatus));
-                            alert(JSON.stringify(errorThrown));
-                        }
-                    });
-
+                    alert(app_hostname);
+                    
+//                    $.ajax({
+//                        url: app_hostname + 'user/login',
+//                        crossDomain: true,
+//                        data: {
+//                            username:username,
+//                            password:password,
+//                        },
+//                        type: 'POST',
+//                        success: function (data, textStatus, jqXHR) {
+//                            console.log(data);
+//                            if(data['succes']){
+//                                window.location="dashboard.html";
+//                            }else{
+//                                M.toast({html: data['error'] })
+//                            }
+//                        },
+//                        error: function (jqXHR, textStatus, errorThrown) {
+//                            alert( JSON.stringify(jqXHR) );
+//                            alert(JSON.stringify(textStatus));
+//                            alert(JSON.stringify(errorThrown));
+//                        }
+//                    });
 //                    window.location = "index.html";
                 });
             });
