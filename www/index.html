@@ -8,6 +8,7 @@ and open the template in the editor.
     <head>
         <title>Apps-Name</title>
         <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src *  'unsafe-inline'; script-src *  'unsafe-inline'; media-src *">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="css/materialize.min.css">
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
@@ -66,31 +67,31 @@ and open the template in the editor.
                     window.localStorage.setItem('password', password);
 //                    hostname
 
-                    alert(app_hostname);
+//                    alert(app_hostname);
                     
-//                    $.ajax({
-//                        url: app_hostname + 'user/login',
-//                        crossDomain: true,
-//                        data: {
-//                            username:username,
-//                            password:password,
-//                        },
-//                        type: 'POST',
-//                        success: function (data, textStatus, jqXHR) {
-//                            console.log(data);
-//                            if(data['succes']){
-//                                window.location="dashboard.html";
-//                            }else{
-//                                M.toast({html: data['error'] })
-//                            }
-//                        },
-//                        error: function (jqXHR, textStatus, errorThrown) {
-//                            alert( JSON.stringify(jqXHR) );
-//                            alert(JSON.stringify(textStatus));
-//                            alert(JSON.stringify(errorThrown));
-//                        }
-//                    });
-//                    window.location = "index.html";
+                    $.ajax({
+                        url: app_hostname + 'user/login',
+                        crossDomain: true,
+                        data: {
+                            username:username,
+                            password:password,
+                        },
+                        type: 'POST',
+                        success: function (data, textStatus, jqXHR) {
+                            console.log(data);
+                            if(data['succes']){
+                                window.location="dashboard.html";
+                            }else{
+                                M.toast({html: data['error'] })
+                            }
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            alert( JSON.stringify(jqXHR) );
+                            alert(JSON.stringify(textStatus));
+                            alert(JSON.stringify(errorThrown));
+                        }
+                    });
+                    window.location = "index.html";
                 });
             });
         </script>
