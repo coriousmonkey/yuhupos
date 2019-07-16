@@ -84,7 +84,9 @@ and open the template in the editor.
                             }
                         },
                         error: function (jqXHR, textStatus, errorThrown) {
-
+                            alert( JSON.stringify(jqXHR) );
+                            alert(JSON.stringify(textStatus));
+                            alert(JSON.stringify(errorThrown));
                         }
                     });
 
