@@ -94,5 +94,13 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-plugin-thermalprint": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-thermalprint"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }
