@@ -51,6 +51,8 @@ function auth() {
 var cart_init = [];
 $(document).on('click', '.add_chart', function () {
     item = decoder($(this).attr('datanya'));
+    cart_init_str=window.localStorage.getItem('cart');
+    cart_init=JSON.parse(cart_init_str);
     var allow_push = true;
     for (var i = 0; i < cart_init.length; i++) {
         if (cart_init[i].id_item == item.id_item) {
