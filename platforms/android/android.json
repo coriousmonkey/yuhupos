@@ -7,12 +7,32 @@
     "files": {
       "res/xml/config.xml": {
         "parents": {
-          "/*": []
+          "/*": [],
+          "/widget": [
+            {
+              "xml": "<feature name=\"BluetoothSerial\"><param name=\"android-package\" value=\"com.megster.cordova.BluetoothSerial\" /></feature>",
+              "count": 1
+            }
+          ]
         }
       },
       "AndroidManifest.xml": {
         "parents": {
-          "/*": []
+          "/*": [],
+          "/manifest": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+              "count": 1
+            }
+          ]
         }
       },
       "res/values/strings.xml": {
@@ -22,8 +42,23 @@
       }
     }
   },
-  "installed_plugins": {},
+  "installed_plugins": {
+    "cordova-plugin-bluetooth-serial": {
+      "PACKAGE_NAME": "com.yuhupos.id"
+    }
+  },
   "dependent_plugins": {},
-  "modules": [],
-  "plugin_metadata": {}
+  "modules": [
+    {
+      "id": "cordova-plugin-bluetooth-serial.bluetoothSerial",
+      "file": "plugins/cordova-plugin-bluetooth-serial/www/bluetoothSerial.js",
+      "pluginId": "cordova-plugin-bluetooth-serial",
+      "clobbers": [
+        "window.bluetoothSerial"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-bluetooth-serial": "0.4.7"
+  }
 }

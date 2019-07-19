@@ -1,18 +1,18 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
   {
-    "id": "cordova-plugin-thermalprint.Thermalprint",
-    "file": "plugins/cordova-plugin-thermalprint/www/printer.js",
-    "pluginId": "cordova-plugin-thermalprint",
+    "id": "cordova-plugin-bluetooth-serial.bluetoothSerial",
+    "file": "plugins/cordova-plugin-bluetooth-serial/www/bluetoothSerial.js",
+    "pluginId": "cordova-plugin-bluetooth-serial",
     "clobbers": [
-      "Thermalprint"
+      "window.bluetoothSerial"
     ]
   }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-  "cordova-plugin-thermalprint": "1.3.8"
+  "cordova-plugin-bluetooth-serial": "0.4.7"
 };
 // BOTTOM OF METADATA
 });
