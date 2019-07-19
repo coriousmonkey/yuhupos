@@ -1,11 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.yuhupos.id" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <feature name="BluetoothService">
-        <param name="android-package" value="zj.com.cn.bluetooth.sdk.BluetoothService" />
-    </feature>
-    <feature name="Main_Activity">
-        <param name="android-package" value="zj.com.cn.bluetooth.sdk.Main_Activity" />
-    </feature>
     <name>Yuhu POS</name>
     <description>
         Hello World sample application that responds to the deviceready event.

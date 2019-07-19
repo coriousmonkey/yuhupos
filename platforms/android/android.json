@@ -7,47 +7,18 @@
     "files": {
       "res/xml/config.xml": {
         "parents": {
-          "/*": [
-            {
-              "xml": "<feature name=\"BluetoothService\"><param name=\"android-package\" value=\"zj.com.cn.bluetooth.sdk.BluetoothService\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"Main_Activity\"><param name=\"android-package\" value=\"zj.com.cn.bluetooth.sdk.Main_Activity\" /></feature>",
-              "count": 1
-            }
-          ]
+          "/*": []
         }
       },
       "AndroidManifest.xml": {
         "parents": {
-          "/*": [
-            {
-              "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH\" />",
-              "count": 1
-            }
-          ]
+          "/*": []
         }
       }
     }
   },
-  "installed_plugins": {
-    "cordova-plugin-thermal-printer": {
-      "PACKAGE_NAME": "com.yuhupos.id"
-    }
-  },
+  "installed_plugins": {},
   "dependent_plugins": {},
-  "modules": [
-    {
-      "id": "cordova-plugin-thermal-printer.ZJPrinter",
-      "file": "plugins/cordova-plugin-thermal-printer/www/ZJPrinter.js",
-      "pluginId": "cordova-plugin-thermal-printer",
-      "clobbers": [
-        "ZJPrinter"
-      ]
-    }
-  ],
-  "plugin_metadata": {
-    "cordova-plugin-thermal-printer": "0.0.5"
-  }
+  "modules": [],
+  "plugin_metadata": {}
 }

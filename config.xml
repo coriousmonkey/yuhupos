@@ -34,5 +34,4 @@
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
-    <plugin name="cordova-plugin-thermal-printer" spec="~0.0.5" />
 </widget>
