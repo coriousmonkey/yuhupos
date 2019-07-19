@@ -404,6 +404,14 @@ module.exports = [
             "navigator.notification",
             "navigator"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-thermal-printer/www/ZJPrinter.js",
+        "id": "cordova-plugin-thermal-printer.ZJPrinter",
+        "pluginId": "cordova-plugin-thermal-printer",
+        "clobbers": [
+            "ZJPrinter"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -420,7 +428,8 @@ module.exports.metadata =
     "cordova-plugin-globalization": "1.0.9",
     "cordova-plugin-inappbrowser": "1.7.2",
     "cordova-plugin-network-information": "1.3.4",
-    "cordova-plugin-vibration": "2.1.6"
+    "cordova-plugin-vibration": "2.1.6",
+    "cordova-plugin-thermal-printer": "0.0.5"
 }
 // BOTTOM OF METADATA
 });

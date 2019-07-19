@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.yuhupos.id" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="BluetoothService">
+        <param name="android-package" value="zj.com.cn.bluetooth.sdk.BluetoothService" />
+    </feature>
+    <feature name="Main_Activity">
+        <param name="android-package" value="zj.com.cn.bluetooth.sdk.Main_Activity" />
+    </feature>
     <name>Yuhu POS</name>
     <description>
         Hello World sample application that responds to the deviceready event.
@@ -8,6 +14,7 @@
         PhoneGap Team
     </author>
     <content src="index.html" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -15,21 +22,6 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <icon density="xhdpi" src="www/res/icon/android/drawable-xhdpi-icon.png" />
-    <icon density="xxhdpi" src="www/res/icon/android/drawable-xxhdpi-icon.png" />
-    <icon density="xxxhdpi" src="www/res/icon/android/drawable-xxxhdpi-icon.png" />
-    <splash density="land-ldpi" src="www/res/screen/android/drawable-land-ldpi-screen.png" />
-    <splash density="land-mdpi" src="www/res/screen/android/drawable-land-mdpi-screen.png" />
-    <splash density="land-hdpi" src="www/res/screen/android/drawable-land-hdpi-screen.png" />
-    <splash density="land-xhdpi" src="www/res/screen/android/drawable-land-xhdpi-screen.png" />
-    <splash density="land-xxhdpi" src="www/res/screen/android/drawable-land-xxhdpi-screen.png" />
-    <splash density="land-xxxhdpi" src="www/res/screen/android/drawable-land-xxxhdpi-screen.png" />
-    <splash density="port-ldpi" src="www/res/screen/android/drawable-port-ldpi-screen.png" />
-    <splash density="port-mdpi" src="www/res/screen/android/drawable-port-mdpi-screen.png" />
-    <splash density="port-hdpi" src="www/res/screen/android/drawable-port-hdpi-screen.png" />
-    <splash density="port-xhdpi" src="www/res/screen/android/drawable-port-xhdpi-screen.png" />
-    <splash density="port-xxhdpi" src="www/res/screen/android/drawable-port-xxhdpi-screen.png" />
-    <splash density="port-xxxhdpi" src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" />
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="DisallowOverscroll" value="true" />

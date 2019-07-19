@@ -8,6 +8,7 @@ and open the template in the editor.
     <head>
         <title>Apps-Name</title>
         <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src *  'unsafe-inline'; script-src *  'unsafe-inline'; media-src *">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="css/materialize.min.css">
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
@@ -18,8 +19,8 @@ and open the template in the editor.
     <body>
         <nav class="teal lighten-1 navbar-fixed">
             <center>
-            <a href="#!" class="brand-logo">Yuhu POS</a>
-            <!--<a href="#" data-target="slide-out" class="sidenav-trigger">Yuhu POS</a>-->
+                <a href="#!" class="brand-logo">Yuhu POS</a>
+                <!--<a href="#" data-target="slide-out" class="sidenav-trigger">Yuhu POS</a>-->
             </center>
         </nav>
         <div class="row">
@@ -50,9 +51,19 @@ and open the template in the editor.
         </div>
         <script>
             $(document).ready(function () {
-//                console.log(app_hostname);
 
-//alert('asdas');
+                ZJPrinter.list(function (data) {
+//                    console.log("Success");
+//                    console.log(data); //list of printer in data array
+                      alert(JSON.stringify(data));
+                }, function (err) {
+//                    console.log("Error");
+//                    console.log(err);
+                      alert(JSON.stringify(err));
+                })
+
+
+
                 $('#login-form').submit(function (e) {
                     e.preventDefault();
 
@@ -66,29 +77,32 @@ and open the template in the editor.
                     window.localStorage.setItem('password', password);
 //                    hostname
 
+//                    alert(app_hostname);
 
                     $.ajax({
                         url: app_hostname + 'user/login',
                         crossDomain: true,
                         data: {
-                            username:username,
-                            password:password,
+                            username: username,
+                            password: password,
                         },
                         type: 'POST',
                         success: function (data, textStatus, jqXHR) {
                             console.log(data);
-                            if(data['succes']){
-                                window.location="dashboard.html";
-                            }else{
-                                M.toast({html: data['error'] })
+                            if (data['succes']) {
+                                window.location = "dashboard.html";
+                            } else {
+//                                M.toast({html: data['error'] })
+                                alert(data['error']);
                             }
                         },
                         error: function (jqXHR, textStatus, errorThrown) {
-
+                            alert(JSON.stringify(jqXHR));
+                            alert(JSON.stringify(textStatus));
+                            alert(JSON.stringify(errorThrown));
                         }
                     });
-
-//                    window.location = "index.html";
+                    window.location = "index.html";
                 });
             });
         </script>

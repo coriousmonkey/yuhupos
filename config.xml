@@ -23,9 +23,7 @@
     <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.5" />
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <platform name="android">
-        
     </platform>
-
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -36,4 +34,5 @@
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
+    <plugin name="cordova-plugin-thermal-printer" spec="~0.0.5" />
 </widget>
