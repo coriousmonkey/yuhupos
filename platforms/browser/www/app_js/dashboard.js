@@ -9,6 +9,7 @@ $(document).ready(function () {
 
             for (var i = 0; i < data.data.length; i++) {
                 row = data.data[i];
+                row.qty=1;
                 //console.log(row);
                 push_html(row);
             }

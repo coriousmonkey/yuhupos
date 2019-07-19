@@ -6,10 +6,6 @@
   "config_munge": {
     "files": {}
   },
-  "installed_plugins": {
-    "cordova-plugin-thermalprint": {
-      "PACKAGE_NAME": "com.yuhupos.id"
-    }
-  },
+  "installed_plugins": {},
   "dependent_plugins": {}
 }

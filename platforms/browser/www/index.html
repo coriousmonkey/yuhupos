@@ -51,19 +51,6 @@ and open the template in the editor.
         </div>
         <script>
             $(document).ready(function () {
-
-                ZJPrinter.list(function (data) {
-//                    console.log("Success");
-//                    console.log(data); //list of printer in data array
-                      alert(JSON.stringify(data));
-                }, function (err) {
-//                    console.log("Error");
-//                    console.log(err);
-                      alert(JSON.stringify(err));
-                })
-
-
-
                 $('#login-form').submit(function (e) {
                     e.preventDefault();
 
@@ -72,12 +59,12 @@ and open the template in the editor.
                     var password = $('input[name=password]').val();
 
 
-//                    console.log($(this).serializeArray());
                     window.localStorage.setItem('username', username);
                     window.localStorage.setItem('password', password);
-//                    hostname
+                    
+                    
+                    window.localStorage.setItem('cart','');
 
-//                    alert(app_hostname);
 
                     $.ajax({
                         url: app_hostname + 'user/login',
@@ -102,7 +89,7 @@ and open the template in the editor.
                             alert(JSON.stringify(errorThrown));
                         }
                     });
-                    window.location = "index.html";
+//                    window.location = "index.html";
                 });
             });
         </script>
