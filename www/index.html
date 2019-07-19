@@ -52,20 +52,20 @@ and open the template in the editor.
             <div class="col s3"></div>
         </div>
         <script>
-            document.addEventListener("deviceready", device_ready(), false);
+//            document.addEventListener("deviceready", device_ready(), false);
 
-            function device_ready() {
-                bluetoothSerial.list(function (devices) {
-                    devices.forEach(function (device) {
-//                        console.log(device.id);
-
-                    });
-                    alert(JSON.stringify(devices));
-
-                }, function gagal() {
-                    alert('gagal');
-                });
-            }
+//            function device_ready() {
+//                bluetoothSerial.list(function (devices) {
+//                    devices.forEach(function (device) {
+////                        console.log(device.id);
+//
+//                    });
+//                    alert(JSON.stringify(devices));
+//
+//                }, function gagal() {
+//                    alert('gagal');
+//                });
+//            }
 
 
 
@@ -81,12 +81,10 @@ and open the template in the editor.
                     var username = $('input[name=username]').val();
                     var password = $('input[name=password]').val();
 
+                    window.localStorage.setItem('cart', '');
 
                     window.localStorage.setItem('username', username);
                     window.localStorage.setItem('password', password);
-
-
-                    window.localStorage.setItem('cart', '');
 
 
                     $.ajax({
