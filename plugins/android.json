@@ -9,6 +9,9 @@
   "installed_plugins": {
     "cordova-plugin-bluetooth-serial": {
       "PACKAGE_NAME": "com.yuhupos.id"
+    },
+    "cordova-plugin-networking-bluetooth": {
+      "PACKAGE_NAME": "com.yuhupos.id"
     }
   },
   "dependent_plugins": {}

@@ -420,6 +420,19 @@ module.exports = [
         "clobbers": [
             "window.bluetoothSerial"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-networking-bluetooth/www/CDVNetEvent.js",
+        "id": "cordova-plugin-networking-bluetooth.CDVNetEvent",
+        "pluginId": "cordova-plugin-networking-bluetooth"
+    },
+    {
+        "file": "plugins/cordova-plugin-networking-bluetooth/www/NetworkingBluetooth.js",
+        "id": "cordova-plugin-networking-bluetooth.NetworkingBluetooth",
+        "pluginId": "cordova-plugin-networking-bluetooth",
+        "clobbers": [
+            "networking.bluetooth"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -437,7 +450,8 @@ module.exports.metadata =
     "cordova-plugin-inappbrowser": "1.7.2",
     "cordova-plugin-network-information": "1.3.4",
     "cordova-plugin-vibration": "2.1.6",
-    "cordova-plugin-bluetooth-serial": "0.4.7"
+    "cordova-plugin-bluetooth-serial": "0.4.7",
+    "cordova-plugin-networking-bluetooth": "1.0.3"
 }
 // BOTTOM OF METADATA
 });

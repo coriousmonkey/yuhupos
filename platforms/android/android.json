@@ -7,7 +7,12 @@
     "files": {
       "res/xml/config.xml": {
         "parents": {
-          "/*": [],
+          "/*": [
+            {
+              "xml": "<feature name=\"NetworkingBluetooth\"><param name=\"android-package\" value=\"cordova.plugin.networking.bluetooth.NetworkingBluetooth\" /></feature>",
+              "count": 1
+            }
+          ],
           "/widget": [
             {
               "xml": "<feature name=\"BluetoothSerial\"><param name=\"android-package\" value=\"com.megster.cordova.BluetoothSerial\" /></feature>",
@@ -18,7 +23,20 @@
       },
       "AndroidManifest.xml": {
         "parents": {
-          "/*": [],
+          "/*": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+              "count": 1
+            }
+          ],
           "/manifest": [
             {
               "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH\" />",
@@ -45,6 +63,9 @@
   "installed_plugins": {
     "cordova-plugin-bluetooth-serial": {
       "PACKAGE_NAME": "com.yuhupos.id"
+    },
+    "cordova-plugin-networking-bluetooth": {
+      "PACKAGE_NAME": "com.yuhupos.id"
     }
   },
   "dependent_plugins": {},
@@ -56,9 +77,23 @@
       "clobbers": [
         "window.bluetoothSerial"
       ]
+    },
+    {
+      "id": "cordova-plugin-networking-bluetooth.CDVNetEvent",
+      "file": "plugins/cordova-plugin-networking-bluetooth/www/CDVNetEvent.js",
+      "pluginId": "cordova-plugin-networking-bluetooth"
+    },
+    {
+      "id": "cordova-plugin-networking-bluetooth.NetworkingBluetooth",
+      "file": "plugins/cordova-plugin-networking-bluetooth/www/NetworkingBluetooth.js",
+      "pluginId": "cordova-plugin-networking-bluetooth",
+      "clobbers": [
+        "networking.bluetooth"
+      ]
     }
   ],
   "plugin_metadata": {
-    "cordova-plugin-bluetooth-serial": "0.4.7"
+    "cordova-plugin-bluetooth-serial": "0.4.7",
+    "cordova-plugin-networking-bluetooth": "1.0.3"
   }
 }

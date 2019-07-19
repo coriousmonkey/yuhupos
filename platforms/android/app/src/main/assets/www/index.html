@@ -13,7 +13,6 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/materialize.min.css">
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
         <script type="text/javascript" src="cordova.js"></script>
-        <!--<script type="text/javascript" src="js/bluetoothSerial.js"></script>-->
         <script src="js/jquery-3.3.1.js"></script>
         <script src="js/materialize.min.js"></script>
         <script src="app_js/config.js"></script>
@@ -46,35 +45,64 @@ and open the template in the editor.
                 <div class="row">
                     <div class="col s12">
                         <button type="submit" class="waves-effect waves-light btn">LOGIN</button>
-                        
+
                     </div>
                 </div>
             </form>
             <div class="col s3"></div>
         </div>
         <script>
-            document.addEventListener("deviceready", device_ready(), false);
 
-            function device_ready() {
-                bluetoothSerial.list(function (devices) {
-                    devices.forEach(function (device) {
-//                        console.log(device.id);
+            document.addEventListener("deviceready", onDeviceReady, false);
 
-                    });
-                    alert(JSON.stringify(devices));
-
-                }, function gagal() {
-                    alert('gagal');
+            function onDeviceReady() {
+                // Now safe to use device APIs
+                var enabled = false;
+                networking.bluetooth.getAdapterState(function (adapterInfo) {
+                    enabled = adapterInfo.enabled;
                 });
+
+                networking.bluetooth.onAdapterStateChanged.addListener(function (adapterInfo) {
+                    // The adapterInfo object has the same properties as getAdapterState
+                    if (adapterInfo.enabled !== enabled) {
+                        enabled = adapterInfo.enabled;
+                        if (enabled) {
+                            console.log('Adapter is enabled');
+                        } else {
+                            console.log('Adapter is disabled');
+                        }
+                    }
+                });
+
+
+                networking.bluetooth.getAdapterState(function (adapterInfo) {
+                    // The adapterInfo object has the following properties:
+                    // address: String --> The address of the adapter, in the format 'XX:XX:XX:XX:XX:XX'.
+                    // name: String --> The human-readable name of the adapter.
+                    // enabled: Boolean --> Indicates whether or not the adapter is enabled.
+                    // discovering: Boolean --> Indicates whether or not the adapter is currently discovering.
+                    // discoverable: Boolean --> Indicates whether or not the adapter is currently discoverable.
+                    alert('Adapter ' + adapterInfo.address + ': ' + adapterInfo.name);
+                }, function (errorMessage) {
+                    alert(errorMessage);
+                });
+
+
+                networking.bluetooth.getDevices(function (devices) {
+                    for (var i = 0; i < devices.length; i++) {
+                        // The deviceInfo object has the following properties:
+                        // address: String --> The address of the device, in the format 'XX:XX:XX:XX:XX:XX'.
+                        // name: String --> The human-readable name of the device.
+                        // paired: Boolean --> Indicates whether or not the device is paired with the system.
+                        // uuids: Array of String --> UUIDs of protocols, profiles and services advertised by the device.
+                        console.log(devices[i].address);
+                    }
+                    alert(JSON.stringify(devices))
+                });
+
             }
 
-
-
             $(document).ready(function () {
-
-
-
-
                 $('#login-form').submit(function (e) {
                     e.preventDefault();
 
@@ -101,7 +129,6 @@ and open the template in the editor.
                             if (data['succes']) {
                                 window.location = "dashboard.html";
                             } else {
-//                                M.toast({html: data['error'] })
                                 alert(data['error']);
                             }
                         },
