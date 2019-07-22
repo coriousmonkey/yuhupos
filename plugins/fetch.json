@@ -110,5 +110,13 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-plugin-datecs-printer": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-datecs-printer"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

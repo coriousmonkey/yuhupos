@@ -433,6 +433,14 @@ module.exports = [
         "clobbers": [
             "networking.bluetooth"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-datecs-printer/www/printer.js",
+        "id": "cordova-plugin-datecs-printer.DatecsPrinter",
+        "pluginId": "cordova-plugin-datecs-printer",
+        "clobbers": [
+            "DatecsPrinter"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -451,7 +459,8 @@ module.exports.metadata =
     "cordova-plugin-network-information": "1.3.4",
     "cordova-plugin-vibration": "2.1.6",
     "cordova-plugin-bluetooth-serial": "0.4.7",
-    "cordova-plugin-networking-bluetooth": "1.0.3"
+    "cordova-plugin-networking-bluetooth": "1.0.3",
+    "cordova-plugin-datecs-printer": "0.10.0"
 }
 // BOTTOM OF METADATA
 });
