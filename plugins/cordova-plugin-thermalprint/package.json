@@ -1,0 +1,105 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-thermalprint@^1.0.0",
+        "scope": null,
+        "escapedName": "cordova-plugin-thermalprint",
+        "name": "cordova-plugin-thermalprint",
+        "rawSpec": "^1.0.0",
+        "spec": ">=1.0.0 <1.3.1",
+        "type": "range"
+      },
+      "C:\\wamp64\\www\\sandbox\\thermaltester"
+    ]
+  ],
+  "_from": "cordova-plugin-thermalprint",
+  "_id": "cordova-plugin-thermalprint@1.3.10",
+  "_inBundle": false,
+  "_inCache": true,
+  "_integrity": "sha1-PtDZzIVwTzl/KrMiIOhd1xzFwk4=",
+  "_location": "/cordova-plugin-thermalprint",
+  "_nodeVersion": "6.11.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-plugin-thermalprint-1.0.0.tgz_1512667699820_0.8924372505862266"
+  },
+  "_npmUser": {
+    "name": "giorgiofellipe",
+    "email": "giorgiofellipe@gmail.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-thermalprint",
+    "name": "cordova-plugin-thermalprint",
+    "escapedName": "cordova-plugin-thermalprint",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-thermalprint/-/cordova-plugin-thermalprint-1.3.10.tgz",
+  "_shasum": "3ed0d9cc85704f397f2ab32220e85dd71cc5c24e",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-thermalprint",
+  "_where": "/home/haris/Documents/yuhupos",
+  "author": {
+    "name": "Apache Software Foundation"
+  },
+  "bugs": {
+    "url": "https://github.com/Dhonisaputra/cordova-plugins-thermalprint.git/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-thermalprint",
+    "platforms": [
+      "android"
+    ]
+  },
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Cordova Datecs Printer Plugin",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "bb5b239ba390f7bdee784f9cd4928850ba4d4e1f",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-thermalprint/-/cordova-plugin-thermalprint-1.0.0.tgz"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.4.0"
+    }
+  ],
+  "gitHead": "279e7cfb925e4f288a95785315600c346ea0fa36",
+  "homepage": "https://github.com/Dhonisaputra/cordova-plugins-thermalprint.git#readme",
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "datecs",
+    "printer",
+    "bluetooth"
+  ],
+  "license": "Apache 2.0",
+  "maintainers": [
+    {
+      "name": "giorgiofellipe",
+      "email": "giorgiofellipe@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-thermalprint",
+  "optionalDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dhonisaputra/cordova-plugins-thermalprint.git"
+  },
+  "scripts": {},
+  "version": "1.3.10"
+}

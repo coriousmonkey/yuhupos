@@ -111,10 +111,18 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-datecs-printer": {
+  "cordova-plugin-bluetooth-zbtprinter": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-datecs-printer"
+      "id": "cordova-plugin-bluetooth-zbtprinter"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-thermalprint": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-thermalprint"
     },
     "is_top_level": true,
     "variables": {}

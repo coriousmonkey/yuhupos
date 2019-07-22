@@ -22,11 +22,19 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-datecs-printer.DatecsPrinter",
-    "file": "plugins/cordova-plugin-datecs-printer/www/printer.js",
-    "pluginId": "cordova-plugin-datecs-printer",
+    "id": "cordova-plugin-bluetooth-zbtprinter.ZebraBluetoothPrinter",
+    "file": "plugins/cordova-plugin-bluetooth-zbtprinter/www/zbtprinter.js",
+    "pluginId": "cordova-plugin-bluetooth-zbtprinter",
     "clobbers": [
-      "DatecsPrinter"
+      "cordova.plugins.zbtprinter"
+    ]
+  },
+  {
+    "id": "cordova-plugin-thermalprint.Thermalprint",
+    "file": "plugins/cordova-plugin-thermalprint/www/printer.js",
+    "pluginId": "cordova-plugin-thermalprint",
+    "clobbers": [
+      "Thermalprint"
     ]
   }
 ];
@@ -35,7 +43,8 @@ module.exports.metadata =
 {
   "cordova-plugin-bluetooth-serial": "0.4.7",
   "cordova-plugin-networking-bluetooth": "1.0.3",
-  "cordova-plugin-datecs-printer": "0.10.0"
+  "cordova-plugin-bluetooth-zbtprinter": "1.0",
+  "cordova-plugin-thermalprint": "1.3.8"
 };
 // BOTTOM OF METADATA
 });

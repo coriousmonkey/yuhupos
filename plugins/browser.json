@@ -43,7 +43,10 @@
     "cordova-plugin-networking-bluetooth": {
       "PACKAGE_NAME": "com.yuhupos.id"
     },
-    "cordova-plugin-datecs-printer": {
+    "cordova-plugin-bluetooth-zbtprinter": {
+      "PACKAGE_NAME": "com.yuhupos.id"
+    },
+    "cordova-plugin-thermalprint": {
       "PACKAGE_NAME": "com.yuhupos.id"
     }
   },

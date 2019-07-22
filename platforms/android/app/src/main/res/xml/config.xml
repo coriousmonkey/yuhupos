@@ -3,7 +3,10 @@
     <feature name="NetworkingBluetooth">
         <param name="android-package" value="cordova.plugin.networking.bluetooth.NetworkingBluetooth" />
     </feature>
-    <feature name="DatecsPrinter">
+    <feature name="ZebraBluetoothPrinter">
+        <param name="android-package" value="it.zenitlab.cordova.plugins.zbtprinter.ZebraBluetoothPrinter" />
+    </feature>
+    <feature name="Thermalprint">
         <param name="android-package" value="com.giorgiofellipe.datecsprinter.DatecsPrinter" />
     </feature>
     <feature name="BluetoothSerial">
@@ -30,5 +33,6 @@
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-targetSdkVersion" value="27" />
     <preference name="android-minSdkVersion" value="27" />
 </widget>
