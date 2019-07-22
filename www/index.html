@@ -100,13 +100,8 @@ and open the template in the editor.
                         // uuids: Array of String --> UUIDs of protocols, profiles and services advertised by the device.
                         console.log(devices[i].address);
                     }
-                    alert(JSON.stringify(devices))
-                });
 
-
-                $('#coba-print').click(function () {
-
-                    var uuid = uuids_bth[0].uuids[0];
+                    var uuid = devices[0].uuids[0];
                     alert(uuid);
 
                     networking.bluetooth.connect(device.address, uuid, function (socketId) {
@@ -120,20 +115,27 @@ and open the template in the editor.
                                 "TEXT 4 0 155 45 Lorem ipsum" + CARRIAGE_RETURN + LINE_FEED +
                                 "INVERSE-LINE 0 45 145 45 45" + CARRIAGE_RETURN + LINE_FEED +
                                 "PRINT" + CARRIAGE_RETURN + LINE_FEED;
-                        
-                        arrayBuffer=[];
+
+                        arrayBuffer = [];
                         arrayBuffer.push(data);
 
                         networking.bluetooth.send(socketId, arrayBuffer, function (bytes_sent) {
 
-                            console.log('Sent ' + bytes_sent + ' bytes');
+                            alert('Sent ' + bytes_sent + ' bytes');
                         }, function (errorMessage) {
-                            console.log('Send failed: ' + errorMessage);
+                            alert('Send failed: ' + errorMessage);
                         });
 
                     }, function (errorMessage) {
-                        console.log('Connection failed: ' + errorMessage);
+                        alert('Connection failed: ' + errorMessage);
                     });
+
+                });
+
+
+                $('#coba-print').click(function () {
+
+
 
                 });
 
