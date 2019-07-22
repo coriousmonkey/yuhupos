@@ -121,7 +121,8 @@ and open the template in the editor.
                                 "INVERSE-LINE 0 45 145 45 45" + CARRIAGE_RETURN + LINE_FEED +
                                 "PRINT" + CARRIAGE_RETURN + LINE_FEED;
                         
-                        arrayBuffer=[data];
+                        arrayBuffer=[];
+                        arrayBuffer.push(data);
 
                         networking.bluetooth.send(socketId, arrayBuffer, function (bytes_sent) {
 
