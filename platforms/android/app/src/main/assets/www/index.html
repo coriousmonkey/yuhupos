@@ -59,7 +59,25 @@ and open the template in the editor.
 
             function onDeviceReady() {
                 // Now safe to use device APIs
-                
+                window.DatecsPrinter.listBluetoothDevices(
+                        function (devices) {
+                            window.DatecsPrinter.connect(devices[0].address,
+                                    function () {
+                                        printSomeTestText();
+                                    },
+                                    function () {
+                                        alert(JSON.stringify(error));
+                                    }
+                            );
+                        },
+                        function (error) {
+                            alert(JSON.stringify(error));
+                        }
+                );
+
+                function printSomeTestText() {
+                    window.DatecsPrinter.printText("Print Test!", 'ISO-8859-1');
+                }
 
             }
 
