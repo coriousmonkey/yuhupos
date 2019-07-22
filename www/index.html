@@ -107,7 +107,7 @@ and open the template in the editor.
                     alert(JSON.stringify(devices));
                     
 
-                    networking.bluetooth.connect(devices, uuid, function (socketId) {
+                    networking.bluetooth.connect(devices[0].address, uuid, function (socketId) {
 
                         var CHAR_ESC = 0x1b;
                         var LINE_FEED = '\n';
