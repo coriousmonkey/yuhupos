@@ -103,22 +103,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-networking-bluetooth": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-networking-bluetooth"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
-  "cordova-plugin-bluetooth-zbtprinter": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-bluetooth-zbtprinter"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-thermalprint": {
     "source": {
       "type": "registry",

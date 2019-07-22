@@ -422,27 +422,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-networking-bluetooth/www/CDVNetEvent.js",
-        "id": "cordova-plugin-networking-bluetooth.CDVNetEvent",
-        "pluginId": "cordova-plugin-networking-bluetooth"
-    },
-    {
-        "file": "plugins/cordova-plugin-networking-bluetooth/www/NetworkingBluetooth.js",
-        "id": "cordova-plugin-networking-bluetooth.NetworkingBluetooth",
-        "pluginId": "cordova-plugin-networking-bluetooth",
-        "clobbers": [
-            "networking.bluetooth"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-bluetooth-zbtprinter/www/zbtprinter.js",
-        "id": "cordova-plugin-bluetooth-zbtprinter.ZebraBluetoothPrinter",
-        "pluginId": "cordova-plugin-bluetooth-zbtprinter",
-        "clobbers": [
-            "cordova.plugins.zbtprinter"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-thermalprint/www/printer.js",
         "id": "cordova-plugin-thermalprint.Thermalprint",
         "pluginId": "cordova-plugin-thermalprint",
@@ -467,8 +446,6 @@ module.exports.metadata =
     "cordova-plugin-network-information": "1.3.4",
     "cordova-plugin-vibration": "2.1.6",
     "cordova-plugin-bluetooth-serial": "0.4.7",
-    "cordova-plugin-networking-bluetooth": "1.0.3",
-    "cordova-plugin-bluetooth-zbtprinter": "1.0",
     "cordova-plugin-thermalprint": "1.3.8"
 }
 // BOTTOM OF METADATA
